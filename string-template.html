@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Template</title>
+  </head>
+  <body>
+    <script>
+      const name = "Iqsan Faisal";
+      const template = `name = ${name}`;
+
+      console.info(template);
+
+      const nilai = 90;
+      const namaTemplate = `name : ${name}, lulus : ${nilai > 75}`;
+      console.info(namaTemplate);
+
+      const multiLine = `nama saya iqsan faisal
+      saya lulus di telkom
+      hobi saya ngoding
+      `;
+
+      document.writeln("<pre>");
+      document.writeln(multiLine);
+      document.writeln("</pre>");
+    </script>
+  </body>
+</html>

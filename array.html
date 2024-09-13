@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <script>
+      let arrayKosong = [];
+      let arrayNama = ["iqsan", "faisal", "iqsanfaisal"];
+      arrayKosong.push("iqsan", "faisal", "iqsanfaisal", "heaven", "demigod");
+      arrayKosong[0] = "ageng";
+      arrayKosong[4] = "iqsan";
+      delete arrayKosong[2];
+      arrayKosong.push("garut");
+
+      document.writeln(`<p> ${arrayKosong} </p>`);
+      console.table(arrayKosong);
+      console.info(arrayKosong.length);
+    </script>
+  </body>
+</html>

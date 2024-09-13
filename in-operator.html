@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>in operator</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        firstName: "iqsan",
+        lastName: "faisal",
+        fullName: "iqsanfaisal",
+      };
+
+      if ("firstName" in person) {
+        alert(`hello ${person.firstName}`);
+      } else {
+        alert("Hello");
+      }
+
+      const student = {
+        namaAnda: "iqsanfaisal",
+        namaJurusan: undefined,
+        namaKelas: "kelas karyawan",
+      };
+
+      if ("namaJurusan" in student) {
+        alert(`Selamat ${student.namaJurusan}`);
+      } else {
+        alert("SELAMAT");
+      }
+
+      const names = [null, "iqsan", null];
+      const result = 1 in names;
+      document.writeln(`<p> ${result} </p>`);
+    </script>
+  </body>
+</html>
