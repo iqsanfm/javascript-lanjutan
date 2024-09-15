@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for in</title>
+  </head>
+  <body>
+    <script>
+      let person = {
+        firstName: "iqsan",
+        lastName: "faisal",
+        fullName: "iqsanfaisal",
+      };
+
+      for (let property in person) {
+        document.writeln(`<p> ${property} : ${person[property]} </p>`);
+      }
+
+      const names = ["iqsan", "faisal", "iqsanfaisal"];
+      for (let index in names) {
+        document.writeln(`<p> ${index} : ${names[index]} </p>`);
+      }
+    </script>
+  </body>
+</html>
