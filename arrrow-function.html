@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function arrow</title>
+  </head>
+  <body>
+    <script>
+      // const sayHello = (name) => {
+      //   const say = `Hello ${name}`;
+      //   console.log(say);
+      // };
+
+      // Versi tidak menggunakan block
+      const sayHello = (name) => console.log(`hello ${name}`);
+      sayHello("iqsan");
+
+      // const sum = (first, second) => {
+      //   return first + second;
+      // };
+
+      const sum = (first, second) => first + second;
+
+      console.log(sum(20, 10));
+
+      function giveMeName(callback) {
+        callback("Iqsanfaisal");
+      }
+
+      // function anonymous
+      // giveMeName(function (name) {
+      //   console.log(`Hello ${name}`);
+      // });
+
+      //Function Arrow
+      giveMeName((name) => console.log(`Hello ${name}`));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function rest parameter</title>
+  </head>
+  <body>
+    <script>
+      function sum(name, ...data) {
+        let total = 0;
+        for (const item of data) {
+          total += item;
+        }
+        document.writeln(`<p> Total ${name} is ${total}</p>`);
+      }
+
+      sum("orange", 1, 2, 3, 4, 5, 6, 7);
+
+      //spread syntax
+      const value = [10, 10, 10, 10, 10];
+      sum("Testing", ...value);
+
+      //argument object
+      function oldSum() {
+        let total = 0;
+        for (const argument of arguments) {
+          total += argument;
+        }
+        document.writeln(`<p> total is ${total} </p>`);
+      }
+      oldSum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+    </script>
+  </body>
+</html>
