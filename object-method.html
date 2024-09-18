@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Method</title>
+  </head>
+  <body>
+    <script>
+      // function sayhello(name) {
+      //   alert(`Hallo ${name}`)
+      // }
+
+      const person = {
+        name: "iqsanfaisal",
+        sayhello: function (name) {
+          alert(`Hallo ${name}`);
+        },
+      };
+
+      person.sayhello("iqsan");
+
+      const register = {
+        fulName: "iqsanfaisal",
+        email: "iqsanfm@gmail.com",
+      };
+      register.sayHello = function (fullName) {
+        alert(`Anda yakin ${fullName}`);
+      };
+
+      register.sayHello("iqsan");
+    </script>
+  </body>
+</html>

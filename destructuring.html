@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring</title>
+  </head>
+  <body>
+    <script>
+      {
+        /// Destructuring Array
+        const name = ["iqsan", "faisal", "agus", "bangbang"];
+        const [firstName, lastName, ...others] = name;
+
+        console.log(firstName);
+        console.log(lastName);
+        console.log(others);
+      }
+
+      {
+        /// Destructuring Object
+        const person = {
+          firstName: "iqsan",
+          lastName: "faisal",
+          address: {
+            street: "Jalan mana aja",
+            city: "Bandung",
+            country: "Indonesia",
+          },
+          hobby: "game",
+          sosMed: "instagram",
+        };
+
+        let { firstName, lastName, address, ...others } = person;
+        console.log(firstName);
+        console.log(lastName);
+        console.log(address);
+        console.log(others);
+      }
+
+      {
+        /// Destructuring Nested Object
+        const person = {
+          firstName: "iqsan",
+          lastName: "faisal",
+          address: {
+            street: "Jalan mana aja",
+            city: "Bandung",
+            country: "Indonesia",
+          },
+          hobby: "game",
+          sosMed: "instagram",
+        };
+
+        let {
+          firstName,
+          lastName,
+          address: { street, city, country },
+          ...others
+        } = person;
+        console.log(firstName);
+        console.log(lastName);
+        // console.log(address);
+        console.log(others);
+        console.log(street);
+        console.log(city);
+        console.log(country);
+      }
+
+      {
+        ///Destructuring di function parameter
+        function displayPerson({ firstName, lastName }) {
+          console.log(firstName);
+          console.log(lastName);
+        }
+
+        const person = {
+          firstName: "iqsan",
+          lastName: "faisal",
+        };
+        displayPerson(person);
+      }
+
+      {
+        /// Destructuring function parameter 2
+        function sum([first, second]) {
+          return first + second;
+        }
+        console.log(sum([10, 10]));
+        console.log(sum([20, 30]));
+      }
+
+      {
+        //Default value
+        const person = ["bengkuang"];
+        ///apabila tidak ada isinya di person, maka akan menggunakan default value
+        const [firstName, lastName = "jeruk"] = person;
+
+        console.log(firstName);
+        console.log(lastName);
+      }
+    </script>
+  </body>
+</html>
